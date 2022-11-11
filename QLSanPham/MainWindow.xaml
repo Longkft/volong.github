@@ -1,0 +1,38 @@
+﻿<Window x:Class="QLSanPham.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QLSanPham"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        Loaded="hienThi">
+
+    <Grid>
+        <Label Content="Mã sản phầm" HorizontalAlignment="Left" Margin="62,61,0,0" VerticalAlignment="Top"/>
+        <Label Content="Tên sản phẩm" HorizontalAlignment="Left" Margin="62,92,0,0" VerticalAlignment="Top"/>
+        <Label Content="Số lượng" HorizontalAlignment="Left" Margin="61,123,0,0" VerticalAlignment="Top"/>
+        <Label Content="Đơn giá" HorizontalAlignment="Left" Margin="61,154,0,0" VerticalAlignment="Top"/>
+        <Label Content="Mã loại" HorizontalAlignment="Left" Margin="61,187,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtmasanpham" HorizontalAlignment="Left" Margin="177,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="183" Height="22"/>
+        <TextBox x:Name="txttensanpham" HorizontalAlignment="Left" Margin="177,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="183" Height="22"/>
+        <TextBox x:Name="txtsoluong" HorizontalAlignment="Left" Margin="177,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="183" Height="22"/>
+        <TextBox x:Name="txtdongia" HorizontalAlignment="Left" Margin="177,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="183" Height="22"/>
+        <TextBox x:Name="txtmaloai" HorizontalAlignment="Left" Margin="177,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="183" Height="22"/>
+        <DataGrid x:Name="dtgrid" Margin="400,61,40,31" AutoGenerateColumns="False"
+                  CanUserAddRows="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Mã sản phẩm" Binding="{Binding Masanpham}"/>
+                <DataGridTextColumn Header="Tên sản phẩm" Binding="{Binding Tensanpham}"/>
+                <DataGridTextColumn Header="Số lượng" Binding="{Binding Soluong}"/>
+                <DataGridTextColumn Header="Đơn giá" Binding="{Binding Dongia}"/>
+                <DataGridTextColumn Width="*" Header="Mã loại" Binding="{Binding Maloai}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btthem" Content="Thêm " HorizontalAlignment="Left" Margin="32,274,0,0" VerticalAlignment="Top" Width="54" Click="btthem_Click" />
+        <Button x:Name="btsua" Content="Sửa" HorizontalAlignment="Left" Margin="137,274,0,0" VerticalAlignment="Top" Width="54" Click="btsua_Click"/>
+        <Button x:Name="btxoa" Content="Xóa" HorizontalAlignment="Left" Margin="250,274,0,0" VerticalAlignment="Top" Width="54" Click="btxoa_Click"/>
+        <Label Content="QUẢN LÝ DANH MỤC SẢN PHẨM" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
